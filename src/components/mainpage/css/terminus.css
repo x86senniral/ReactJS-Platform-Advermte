@@ -1,0 +1,104 @@
+.terminal {
+  background: #1e1e1e;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 10px #000;
+  width: 100%; /* instead of fixed width, use percentage */
+  max-width: 1500px; /* max-width to ensure it doesn't exceed a certain size on large screens */
+  margin: 20px auto;
+  box-sizing: border-box; /* Make sure padding and border are included in the width */
+}
+  
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .terminal-buttons {
+    display: flex;
+  }
+  
+  .terminal-button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: none;
+  }
+  
+  .close {
+    background-color: #ff5f56;
+  }
+  
+  .minimize {
+    background-color: #ffbd2e;
+  }
+  
+  .maximize {
+    background-color: #27c93f;
+  }
+  
+  .terminal-title {
+    margin-left: 16px;
+    font-size: 0.9em;
+    color: #bbb;
+  }
+  
+  .terminal-window {
+    padding: 10px;
+    background: #1e1e1e;
+    height: 500px; 
+    overflow-y: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .terminal-content {
+    text-align: left; /* Align text to the left */
+    margin: 0;
+    white-space: pre-wrap; /* allow text to wrap instead of overflow */
+}
+  @media screen and (max-width: 768px) { /* Adjusting for tablets */
+    .terminal, .terminal-window {
+        margin: 5px; /* smaller margin on smaller screens */
+        padding: 3px;
+        height: auto; /* make the height flexible */
+    }
+    .terminal-bar {
+        padding: 2px 5px;
+    }
+    .terminal-button {
+        height: 10px;
+        width: 10px;
+        margin-right: 5px;
+    }
+    .terminal-title {
+        font-size: 0.8em; /* smaller font size */
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) { /* Adjusting for mobile phones */
+    .terminal, .terminal-window {
+        margin: 2px; /* even smaller margin for very small screens */
+        padding: 2px;
+    }
+    .terminal-bar {
+        padding: 1px 5px;
+    }
+    .terminal-button {
+        height: 8px;
+        width: 8px;
+        margin-right: 4px;
+    }
+    .terminal-title {
+        font-size: 0.7em; /* even smaller font size */
+        margin-left: 4px;
+    }
+}

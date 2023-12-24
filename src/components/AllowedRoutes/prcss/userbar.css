@@ -1,0 +1,44 @@
+/* General styles for nav items */
+.nav-item a {
+    margin-right: 20px; /* Adjusted from 100px to 20px for better spacing on all devices */
+    transition: color 0.3s ease-in-out; /* Moved from .hv to here for a global hover effect */
+  }
+  
+  /* Ensure the last nav item has no margin on the right */
+  .nav-item:last-child a {
+    margin-right: 0;
+  }
+  
+  /* Styles for the underline effect */
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .nav-item a {
+      margin-right: 10px; /* Smaller margin for mobile view */
+    }
+  }
+  

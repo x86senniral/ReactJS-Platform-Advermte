@@ -1,0 +1,67 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: rgb(243 244 246);
+  min-height: 100vh;
+}
+
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  margin-left: 300px;
+  display: flex;
+  justify-content: space-around; /* This will spread the bubbles across the width */
+  flex-wrap: wrap; /* This will allow bubbles to wrap into new rows if needed */
+  width: 100%;
+  height: 100%; /* Adjust the height as needed */
+}
+
+
+.bubbles span {
+  margin-left: 300px;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4fc3dc, /* Glow effect */
+              0 0 30px #4fc3dc, /* Medium glow */
+              0 0 60px #4fc3dc; /* Strong glow */
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+
+.bubbles span:nth-child(even) {
+  /* ... other properties ... */
+  box-shadow: 0 0 10px #4fc3dc, /* Adjusted values for better visibility */
+              0 0 30px #4fc3dc,
+              0 0 60px #4fc3dc;
+}
+
+
+@keyframes animate {
+  0%
+  {
+    transform: translateY(100vh) scale(0);
+  }
+  100%
+  {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+
+.intro{
+  font-size: 40px;
+}
