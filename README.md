@@ -1,5 +1,6 @@
 ## About
-It took me about 2 weeks to finish up most of this project. It's a full template of a react.js platform with full-authentication utlity, messaging system/Threads and creating public posts that can be seen by other users. Additionally each user has their own IDs & customizable Public profile that also can be seen by other users as well.
+A full template of a React platform with full-authentication utlity, messaging system/Threads and creating public posts that can be seen by other users. Additionally each user has their own IDs & customizable Public profile that also can be seen by other users as well. The focus on the platform is mostly based on backend. Front-end is an extremely basic design made using tailwindcss.
+
 ## Initialization.
 The Initialization is as simply as initializing your firebase `firestore` and configurations:
 - Register a a firebase account.
